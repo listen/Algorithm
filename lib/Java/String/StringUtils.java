@@ -80,4 +80,22 @@ public class StringUtils {
 		}
 		return p;
 	}
+	public static int kmp(String text, String pattern){
+		int[] fail = prefixFunction(pattern);
+		int i = 0, j = 0;
+		while (i < text.length() && j < pattern.length() ){
+			if (pattern.charAt(j) == text.charAt(i)){
+				++i;++j;
+			}else if (j == 0){//如果第一个字符匹配失败，从str的下一个字符开始
+				++i;
+			}else{
+				j = fail[j - 1];
+			}
+		}
+		if (j == pattern.length() ){
+			return i - j;
+		}else{
+			return -1;
+		}
+	}
 }
