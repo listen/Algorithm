@@ -1,0 +1,40 @@
+Arrays.fill();        memset
+System.arraycopy();   复制数组
+a.sort()              排序
+
+输入空格隔开
+String[] a = Pattern.compile(" ").split((String)target);
+
+输入空格隔开
+StringTokernizer st = new StringTokenizer((String)sb);
+whlile(st.hasNext){
+String temp = st.nextToken;
+}
+
+
+
+输入的数组转换为list存放
+Collections.addAll(des, src);
+
+输入的list作为数组
+list.toArray();
+
+初始化map
+Map<String, int[]> m = new HashMap<String, int[]>();
+m.put("123", new int[]{0, 0, 0});
+
+对map的元素进行排序
+List<Map.Entry<String, int[]>> list = new ArrayList<Map.Entry<String, int[]>>;
+Collections.sort(list, new mapComparator());
+class mapComparator implements Comparator<Map.Entry<String, int[]>>{
+	public int compare(Entry<String, int[]> o1, Entry<String, int[]>o2){
+		return o2.getValue()[i] - o1.getValue()[i];
+	return o1.getKey().compareTo(o2.getKey);
+
+
+char数组转换为String，注意不可以用a.toString, 默认的是数组的起始地址
+应该使用String.valueOf(a);
+String 转换为数组: str.toCharArray();
+String 转换为int : Integer.valueOf(str)
+int 转换为 String: String.valueOf();
+将字符串转换为整数:Integer.parseInt((String)a);
