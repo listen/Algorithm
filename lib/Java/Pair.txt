@@ -1,0 +1,30 @@
+public class Pair{
+		public int a;
+		public int b;
+		public Pair(int a, int b) {
+			// TODO Auto-generated constructor stub
+			this.a = a;
+			this.b = b;
+		}
+	}
+
+
+ArrayList<Pair> list = new ArrayList<Pair>();
+		for (int i = 1; i <= totalCount; ++i){
+			list.clear();
+			for (int j = 0; j < totalCount; ++j){
+				now[j] = init[j] + grow[j] * i;
+				list.add(new Pair(now[j], grow[j]));
+			}
+			Collections.sort(list, new Comparator<Pair>(){
+				public int compare(Pair o1, Pair o2){
+					if (o1.a != o2.a){
+						return (o2.a - o1.a);
+					}
+					return (o1.b - o2.b);
+				}
+			});
+			res = 0;
+			for (int j = i; j < totalCount; ++j){
+				res += list.get(j).a;
+			}

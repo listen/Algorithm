@@ -1,0 +1,30 @@
+R一定要取的非常大
+
+while(R - L > 1) // Binary search
+{
+	M = (L + R) / 2;
+        if(haveSequence(M , condition))
+            L = M;
+        else
+            R = M;
+}
+return L;
+
+
+
+
+
+
+
+
+
+
+while(r - l > 1) // Binary search
+			{
+				int m = (l + r) / 2;
+			    if(isValid(m))
+			       r = m;
+			    else	
+			       l = m;
+			}
+return r;
